@@ -12,8 +12,8 @@ function getTime() {
 	minutes = minutes < 10 ? '0'+minutes : minutes;
 	var strTime = hours + ':' + minutes + ' ' + ampm;
 	return strTime;
-	day = date.getMonth() + "/" + date.getDate() + "/" date.getFullYear();
-	document.getElementById("time").innerHTML = strTime + "<br>" +  day 
+	day = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
+	document.getElementById("time").innerHTML = strTime + "<br>" + day; 
 	setTimeout(getTime(), 1000);
 }
 getTime();
@@ -37,12 +37,14 @@ CTRL+T to open a new tab.</p>
 </p>
 </div>
 
-<div style="float:left; width: 25%;>
+<div style="float:left; width: 25%;">
 <b>Entertainment</b><hr>
 <a href="https://odysee.com">Odysee</a>
 </div>
-
+<div style="float:left; width: 100%;">
+<b>Copyright info.</b>
 <hr>
 <p>Copyright Samuel Lord. All rights reserved.</p>
+</div>
 </body>
 </html>
