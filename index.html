@@ -51,8 +51,9 @@ function getTime() {
 	var strTime = hours + ':' + minutes + ' ' + ampm;
 	day =  month + "/" + date.getDate() + "/" + date.getFullYear();
 	document.getElementById("time").innerHTML = strTime + "<br>" + day;
+        setTimeout(getTime(), 1000);
 }
-window.onload = setTimeout(getTime(), 1000);
+window.onload = getTime();
 </script>
 </html>
 
