@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head><title>Welcome to the Internet.</title>
+<script>
+function getTime() {
+	date = new Date();
+	var hours = date.getHours();
+	var minutes = date.getMinutes();
+	var ampm = hours >= 12 ? 'pm' : 'am';
+	hours = hours % 12;
+	hours = hours ? hours : 12; // the hour '0' should be '12'
+	minutes = minutes < 10 ? '0'+minutes : minutes;
+	var strTime = hours + ':' + minutes + ' ' + ampm;
+	return strTime;
+	day = date.getMonth() + "/" + date.getDate() + "/" date.getFullYear();
+	document.getElementById("time").innerHTML = strTime + "<br>" +  day 
+	setTimeout(getTime(), 1000);
+}
+getTime();
+</script>
+</head>
+<body style="text-align: center;">
+<h1 id="time"></h1>
+<h3>Welcome to the internet</h3>
+<hr>
+<div style="float: left; width: 25%;">
+<p><b>Tips on using surf:</b><hr>
+CTRL+G to go,<br>
+CTRL+T to open a new tab.</p>
+</div>
+
+<div style="float: left; width: 25%;">
+<p><b>Need help/inspiration?</b><hr>
+<a href="https://duckduckgo.com">Duck it!</a><br>
+<a href="https://stackoverflow.com">Stack Overflow</a>
+<a href="https://github.com">Github</a>
+</p>
+</div>
+
+<div style="float:left; width: 25%;>
+<b>Entertainment</b><hr>
+<a href="https://odysee.com">Odysee</a>
+</div>
+
+<hr>
+<p>Copyright Samuel Lord. All rights reserved.</p>
+</body>
+</html>
