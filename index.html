@@ -30,7 +30,6 @@ CTRL+T to open a new tab.</p>
 <p>Copyright Samuel Lord. All rights reserved.</p>
 </div>
 </body>
-<script>
 function getTime() {
 	date = new Date();
 	var hours = date.getHours();
@@ -42,9 +41,8 @@ function getTime() {
 	var strTime = hours + ':' + minutes + ' ' + ampm;
 	return strTime;
 	day = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
-	document.getElementById("time").innerHTML = strTime + "<br>" + day; 
-	setTimeout(getTime(), 1000);
+	document.getElementById("time").innerHTML = strTime + "<br>" + day;
 }
-getTime();
+window.onload = setTimeout(getTime(), 1000);
 </script>
 </html>
