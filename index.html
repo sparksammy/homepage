@@ -30,19 +30,30 @@ CTRL+T to open a new tab.</p>
 <p>Copyright Samuel Lord. All rights reserved.</p>
 </div>
 </body>
+<script>
 function getTime() {
 	date = new Date();
 	var hours = date.getHours();
 	var minutes = date.getMinutes();
-	var ampm = hours >= 12 ? 'pm' : 'am';
+	if (hours >= 12) {
+		ampm = "pm"
+	} else {
+		ampm = "am"
+	}
 	hours = hours % 12;
-	hours = hours ? hours : 12; // the hour '0' should be '12'
-	minutes = minutes < 10 ? '0'+minutes : minutes;
+	if (hours == 0) {
+		hours = 12
+    	}
+	if (minutes < 10) {
+		'0'+minutes
+	}
+	month = date.getMonth() + 1
 	var strTime = hours + ':' + minutes + ' ' + ampm;
-	return strTime;
-	day = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
+	day =  month + "/" + date.getDate() + "/" + date.getFullYear();
 	document.getElementById("time").innerHTML = strTime + "<br>" + day;
 }
 window.onload = setTimeout(getTime(), 1000);
 </script>
 </html>
+
+
